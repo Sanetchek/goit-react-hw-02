@@ -4,6 +4,7 @@ import css from "./App.module.css"
 import Description from "../Description/Description"
 import Options from "../Options/Options"
 import Feedback from "../Feedback/Feedback"
+import Notification from '../Notification/Notification';
 
 function App() {
   const [countFeed, setCountFeed] = useState(() => {
@@ -48,11 +49,12 @@ function App() {
         reset={resetFeedback}
       />
 
-      <Feedback
-        count={countFeed}
-        total={totalFeedback}
-        positive={positiveFeedback}
-      />
+      {totalFeedback > 0 ? (
+        <Feedback count={countFeed} positive={positiveFeedback} />
+      ) : (
+          <Notification />
+      )}
+
     </>
   );
 }

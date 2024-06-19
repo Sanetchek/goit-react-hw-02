@@ -7,3 +7,10 @@
   max-width: 300px;
   margin: 20px auto;
 }
+
+.feedbackItem {
+  font-size: 1.2em;
+  color: #333;
+  margin: 10px 0;
+  font-family: 'Arial', sans-serif;
+}
